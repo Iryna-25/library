@@ -11,7 +11,7 @@ function TagsInput() {
             return
         setTags([...tags, value])
         e.target.value = ''
-        // if (tags > 3) {
+        // if (tags.length > 3) {
         //     alert("Stop")
         // }
     }
@@ -42,98 +42,3 @@ function TagsInput() {
 export default TagsInput;
 
 
-
-
-
-// export const ListOfResources = () => {
-
-//     const [resourceList, setResourceList] = useState([{ resource: " " }]);
-
-//     // console.log(resourceList);
-
-//     const handleResourceAdd = () => {
-//         setResourceList([...resourceList, { resource: " " }]);
-//     };
-
-//     const handleResourceRemove = (index) => {
-//         const list = [...resourceList];
-//         list.splice(index, 1);
-//         setResourceList(list);
-//     };
-
-//     const handleResourceChange = (e, index) => {
-//         const { name, value } = e.target;
-//         const list = [...resourceList];
-//         list[index][name] = value;
-//         setResourceList(list);
-//     };
-
-//     // if (resourceList.length > 9) {
-//     //     alert("Sorry, you cannot add more than 9 resources")
-//     // }
-
-//     // const onClick = (e) => {
-//     //     const x = 0;
-//     //     if (x < 4) {
-//     //         alert ('ghj')
-//     //     } else {
-//     //         alert ('fghj')
-//     //     }
-//     //     e.preventDefault();
-//     //     console.log(e);
-//     // }
-//     return (
-//         < StatisticModal >
-//             <div>
-//                 <label htmlFor="resource"> Resource(s) </label>
-//                 <h3> Please, add resource(s) below </h3>
-//                 <p>Remember, that you can add no more than 9 resources</p>
-//                 {resourceList.map((singleResource, index) => (
-//                     <div key={index} >
-//                         <div>
-//                             <Input
-//                                 name="resource"
-//                                 type="text"
-//                                 id="resource"
-//                                 value={singleResource.resource}
-//                                 onChange={(e) => handleResourceChange(e, index)}
-//                                 required
-//                             />
-//                             {resourceList.length - 1 === index && resourceList.length < 9 &&
-//                                 (
-//                                     <span
-//                                         type="button"
-//                                         onClick={handleResourceAdd}
-//                                     > Add </span>
-//                                 )
-//                             }
-//                         </div>
-//                         <div>
-//                             {resourceList.length !== 1 &&
-//                                 (
-//                                     <span
-//                                         type="button"
-//                                         onClick={() => handleResourceRemove(index)}
-//                                     >
-//                                         <span>&times;</span>
-//                                     </span>
-//                                 )
-//                             }
-//                         </div>
-//                     </div>
-//                 ))}
-//             </div>
-//             <div>
-//                 <h3>Added resource(s)</h3>
-//                 {
-//                     // resourceList &&
-//                     resourceList.map((singleResource, index) => (
-//                         <ul key={index}>
-//                             {singleResource.resource && <li> {singleResource.resource} </li>}
-//                         </ul>
-//                     ))
-//                 }
-//             </div>
-//         </StatisticModal>
-//     );
-// }
